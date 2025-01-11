@@ -1,10 +1,10 @@
 # [level 1] 나머지가 1이 되는 수 찾기 - 87389 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/87389) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/87389?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 36.4 MB, 시간: 5.80 ms
+메모리: 63.2 MB, 시간: 5.28 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 01월 12일 06:13:53
+2025년 01월 12일 06:29:48
 
 ### 문제 설명
 
