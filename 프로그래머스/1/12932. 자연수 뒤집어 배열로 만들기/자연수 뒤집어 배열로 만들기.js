@@ -1,9 +1,11 @@
 function solution(n) {
     var answer = [];
-    for(let i=0;n>0;i++){
-        answer[i]=n%10;
-        n=parseInt(n/=10);
+    var str =n.toString();
+    answer=str.split("");
+    for(let i=0;i<str.length;i++){
+        answer[i]=parseInt(answer[i]);
     }
+    answer.reverse();
     
     return answer;
 }
