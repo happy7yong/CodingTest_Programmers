@@ -19,7 +19,6 @@ function solution(board) {
         })   
     }
     
-    var board_ans = board_cl.map((row)=>row.filter((num)=>num!==1))
-    board_ans = board_ans.map((row)=>row=row.length).reduce((acc,cur)=>acc+cur)
+    var board_ans = board_cl.map((row)=>row.filter((num)=>num!==1)).map((row)=>row=row.length).reduce((acc,cur)=>acc+cur)
     return board_ans;
 }
