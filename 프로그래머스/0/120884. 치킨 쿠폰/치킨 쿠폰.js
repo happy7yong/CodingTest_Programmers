@@ -1,13 +1,13 @@
 function solution(chicken) {
-    var left_coupon = 0;
-    var service = 0;
-    var new_coupon = 0;
+    let service = 0;
+    let coupon_left = 0;
     
-    while(chicken>=10){
-        new_coupon = Math.floor(chicken/10)
-        service += new_coupon
-        left_coupon = chicken%10
-        chicken = left_coupon+new_coupon
+    while( chicken>=10 ){
+        let coupon_new = Math.floor(chicken/10);
+        service += coupon_new;
+        coupon_left = chicken%10
+        chicken = coupon_left+coupon_new
     }
+    
     return service;
 }
