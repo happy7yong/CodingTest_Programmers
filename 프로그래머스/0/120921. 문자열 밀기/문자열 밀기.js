@@ -1,20 +1,8 @@
 function solution(A, B) {
-    var A_arr = [...A]
-    var word = [];
-    var word_s = "";
-    for(let i=0;i<A_arr.length;i++){
-        A_arr.map((_,index)=>{
-                word[(index+i)%A_arr.length]=_
-        })
+    for(let i=0;i<A.length;i++){
+        if(A===B) return i
         
-        word_s=word.join("");
-        
-        if(word_s===B){
-            return i
-        }
-            
+        A = A.at(-1) + A.slice(0,A.length-1)
     }
-    
-    return -1
-
+    return -1;
 }
