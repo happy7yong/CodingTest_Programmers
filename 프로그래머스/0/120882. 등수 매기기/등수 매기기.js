@@ -1,5 +1,7 @@
 function solution(score) {
-    let score_sum = score.map(num=>num[0]+num[1])
-    let score_sort = [...score_sum].sort((a,b)=>b-a)
-    return score_sum.map(num=> score_sort.indexOf(num)+1 );
+    var answer = [];
+    //평균 점수
+    let score_age = score.map(s=>(s[0]+s[1])/2)
+    let score_sort = [...score_age].sort((a,b)=>b-a);
+    return score_age.map(_=>score_sort.indexOf(_)+1);
 }
