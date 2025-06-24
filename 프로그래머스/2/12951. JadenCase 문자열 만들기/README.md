@@ -1,10 +1,10 @@
 # [level 2] JadenCase 문자열 만들기 - 12951 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12951) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12951?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 33.4 MB, 시간: 0.21 ms
+메모리: 63.7 MB, 시간: 17.76 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 13일 23:13:50
+2025년 06월 24일 18:26:18
 
 ### 문제 설명
 
