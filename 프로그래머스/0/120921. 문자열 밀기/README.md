@@ -1,10 +1,10 @@
 # [level 0] 문자열 밀기 - 120921 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120921) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120921?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 33.6 MB, 시간: 0.20 ms
+메모리: 61.7 MB, 시간: 2.23 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 06월 02일 14:27:38
+2025년 07월 05일 11:19:48
 
 ### 문제 설명
 
