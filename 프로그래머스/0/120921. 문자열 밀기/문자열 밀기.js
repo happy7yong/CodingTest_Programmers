@@ -1,8 +1,12 @@
 function solution(A, B) {
+    
+    
     for(let i=0;i<A.length;i++){
-        if(A===B) return i
-        
-        A = A.at(-1) + A.slice(0,A.length-1)
+        const shiftA = A.slice(A.length-i) + A.slice(0,A.length-i)
+        console.log(shiftA)
+        if(shiftA === B){
+            return i
+        }
     }
     return -1;
 }
