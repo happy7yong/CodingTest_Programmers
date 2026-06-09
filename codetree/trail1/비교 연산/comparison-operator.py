@@ -1,0 +1,8 @@
+n,m = map(int,input().split())
+
+print(1 if n>=m else 0)
+print(1 if n>m else 0)
+print(1 if m>=n else 0)
+print(1 if m>n else 0)
+print(1 if m==n else 0)
+print(1 if m!=n else 0)
