@@ -1,15 +1,12 @@
 n = int(input())
 arr = list(map(int, input().split()))
-max=0
 
-def f(depth,max,arr) :
+def f(d) :
     #n까지 들어왔을때 최댓값
-    if max <= arr[depth]:
-        max = arr[depth] 
+    if d==0 :
+        return arr[d]
 
-    if depth<=0 :
-        return max
-    
-    return f(depth-1,max,arr) #현재 최솟값도 같이 return 
+    return max(f(d-1), arr[d])
 
-print(f(n-1,max,arr))
+
+print(f(n-1))
