@@ -1,25 +1,27 @@
 n = int(input())
 commands = [tuple(input().split()) for _ in range(n)]
 x,y= zip(*commands)
-# x = []
-# dir = []
+
+total = sum(map(int,x))
 
 #배열을 만들기
-arr = [[] for _ in range(2*n*max(map(int,x)))]
+arr = [[] for _ in range(2*(total+1))]
 
 #현재 위치 초기화
-cur = (2*n*max(map(int,x)))//2
+cur = total//2
 
 def Ldraw(arr,num,cur) :
     #왼쪽으로 갈경우
     for i in range(cur,cur-num,-1) :
         arr[i].append("W")
+
     return cur-num+1
 
 def Rdraw(arr,num,cur) :
     #오른쪽으로 갈경우
     for i in range(cur,cur+num) :
         arr[i].append("B")
+
     return cur+num-1
 
 for num, direction in commands:
@@ -31,39 +33,33 @@ for num, direction in commands:
     else : 
         cur = Ldraw(arr,num,cur)
 
-#흰검회 
-answerArr = [0 for i in range(3)]
 
 def isTracking(arr) :
-    cntB = 0
-    cntW = 0
+    cnt_B = arr.count("B")
+    cnt_W = arr.count("W")
 
-    for ele in arr :
-        if ele == "B" :
-            cntB += 1
-        elif ele == "W" :
-            cntW += 1
-    if cntB == 0 and cntW == 0:
-        return 0
-    elif cntB >= 2 and cntW >= 2:
+    if cnt_B >= 2 and cnt_W >= 2 :
         return "G"
-    elif arr[-1] == "B" :
-        return "B"
-    elif arr[-1] == "W" :
-        return "W"  
-    else :
+    elif not arr :
         return 0
+    else :
+        return arr[-1]
+
+w = 0
+b = 0
+g = 0
 
 for track in arr :
+    result = isTracking(track)
     #회색인지, 검은색인지, 하얀색인지 
-    if isTracking(track) == "G" :
-        answerArr[2] += 1
-    elif isTracking(track) == "B" :
-        answerArr[1]+=1
-    elif isTracking(track) == "W":
-        answerArr[0] +=1
+    if result == "G" :
+        g += 1
+    elif result == "B" :
+        b+=1
+    elif result == "W":
+        w +=1
 
-print(" ".join(map(str,answerArr)))
+print(w,b,g)
 
 
 
