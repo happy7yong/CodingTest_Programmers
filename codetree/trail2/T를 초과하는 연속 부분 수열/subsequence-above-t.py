@@ -5,9 +5,7 @@ max_cnt = 0
 cnt = 0
 
 for i in range(n) :
-    if arr[i-1]>t :
-        cnt+=1
-    elif i>0 and (arr[i-1] > t and arr[i] > t) :
+    if arr[i] > t:
         cnt+=1
     else :
         cnt=0
