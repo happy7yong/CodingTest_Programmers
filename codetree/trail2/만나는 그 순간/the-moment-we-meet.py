@@ -37,9 +37,11 @@ for _ in range(m):
             cnt-=1
             arrB.append(cnt)
 
+ans = -1
 for i in range(len(arrA)) :
     if arrA[i] == arrB[i] :
-        print(i+1)
+        ans = i+1
         break
-    if len(arrA)-1 == i : print("-1")
+
+print(ans)
 
